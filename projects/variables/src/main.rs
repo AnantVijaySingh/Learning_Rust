@@ -18,4 +18,23 @@ fn main() {
     }
 
     println!("Value of y in outer scope: {}", y);
+
+    // Data types
+    // Rust is a statically typed language
+
+    let mut integer:u8 = 254;
+    integer = integer + 1;
+
+    println!("Value of integer is {}", integer);
+
+    let a:f32 = 3.14515926535;
+    let b:f64 = 3.14515926535;
+
+    println!("Value of a is {}", a);
+    println!("Value of b is {}", b);
+
+    let t:bool = true;
+    let emoji:char = '😻'; //Rust’s char type is four bytes in size and represents a Unicode Scalar Value
+    println!("{}", emoji);
+
 }
