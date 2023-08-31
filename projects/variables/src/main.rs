@@ -33,8 +33,36 @@ fn main() {
     println!("Value of a is {}", a);
     println!("Value of b is {}", b);
 
-    let t:bool = true;
+    let _t:bool = true;
     let emoji:char = '😻'; //Rust’s char type is four bytes in size and represents a Unicode Scalar Value
     println!("{}", emoji);
 
+    // Compound data types
+    let tuple:(i32, f64, u8) = (500, 6.4, 1);
+
+    let (_p,q,_r) = tuple;
+
+    println!("The value of q is {}", q);
+
+    let _five_hundred = tuple.0;
+    let six_point_four = tuple.1;
+
+    println!("six point four {}", six_point_four);
+
+    let arr:[i32; 5] = [1, 2, 3, 4, 5];
+
+    let months:[&str; 12] = ["January", "February", "March", "April", "May", "June", "July",
+        "August", "September", "October", "November", "December"];
+
+    // You can also initialize an array to contain the same value for each element by specifying the
+    // initial value, followed by a semicolon, and then the length of the array in square brackets
+    let a = [3; 5];
+
+    println!("{}", a[0]);
+
+    let t = ([1; 2], [3; 4]);
+
+    let (a,_) = t;
+
+    println!("{}", a[1] + t.1[1]);
 }
