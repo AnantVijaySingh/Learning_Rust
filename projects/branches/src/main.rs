@@ -93,19 +93,19 @@ fn count_using_for(upto: i32) {
 }
 
 fn largest_prime_number_in_i8 () {
-    let max = i8::MAX;
+    let max = i32::MAX;
 
     println!("- - - - - - - - - - - - - - - - - - - - - - ");
 
     for largest_prime in (2..max).rev() {
         if is_prime(largest_prime) {
-            println!("Largest prime number that i8 can hold is: {}", largest_prime);
+            println!("Largest prime number that i32 can hold is: {}", largest_prime);
             break
         }
     }
 }
 
-fn is_prime(number: i8) -> bool {
+fn is_prime(number: i32) -> bool {
     for n in 2..number {
         if number % n == 0 {
             println!("{} is not prime as it is divisible by {}", number, n);

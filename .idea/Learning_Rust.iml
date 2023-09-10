@@ -7,11 +7,15 @@
       <sourceFolder url="file://$MODULE_DIR$/projects/variables/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/projects/branches/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/projects/functions/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/projects/ownership/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/projects/top_10_books/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/projects/guessing_game/target" />
       <excludeFolder url="file://$MODULE_DIR$/projects/hello_cargo/target" />
       <excludeFolder url="file://$MODULE_DIR$/projects/variables/target" />
       <excludeFolder url="file://$MODULE_DIR$/projects/branches/target" />
       <excludeFolder url="file://$MODULE_DIR$/projects/functions/target" />
+      <excludeFolder url="file://$MODULE_DIR$/projects/ownership/target" />
+      <excludeFolder url="file://$MODULE_DIR$/projects/top_10_books/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
