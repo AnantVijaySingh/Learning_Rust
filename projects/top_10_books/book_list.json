@@ -1,52 +1,52 @@
-{
-    "1": {
-      "name": "Beyond Entrepreneurship 2.0",
-      "author": "James C. Collins, Bill Lazier",
-      "goodreads_link": "https://www.goodreads.com/book/show/55270310-be-2-0-beyond-entrepreneurship-2-0"
-    },
-    "2": {
-      "name": "Good Economics for Hard Times",
-      "author": "Abhijit V. Banerjee, Esther Duflo",
-      "goodreads_link": "https://www.goodreads.com/book/show/51014619-good-economics-for-hard-times"
-    },
-    "3": {
-      "name": "Atomic Habits",
-      "author": "James Clear",
-      "goodreads_link": "https://www.goodreads.com/book/show/40121378-atomic-habits"
-    },
-    "4": {
-      "name": "Ultra-Processed People",
-      "author": "Chris van Tulleken",
-      "goodreads_link": "https://www.goodreads.com/book/show/62586003-ultra-processed-people"
-    },
-    "5": {
-      "name": "Wordslut",
-      "author": "Amanda Montell",
-      "goodreads_link": "https://www.goodreads.com/book/show/41716694-wordslut"
-    },
-    "6": {
-      "name": "The Martian",
-      "author": "Andy Weir",
-      "goodreads_link": "https://www.goodreads.com/book/show/18007564-the-martian"
-    },
-    "7": {
-      "name": "",
-      "author": "",
-      "goodreads_link": ""
-    },
-    "8": {
-      "name": "",
-      "author": "",
-      "goodreads_link": ""
-    },
-    "9": {
-      "name": "",
-      "author": "",
-      "goodreads_link": ""
-    },
-    "10": {
-      "name": "",
-      "author": "",
-      "goodreads_link": ""
-    }
-}
+[
+  {
+    "name": "Beyond Entrepreneurship 2.0",
+    "author": "James C. Collins, Bill Lazier",
+    "goodreads_link": "https://www.goodreads.com/book/show/55270310-be-2-0-beyond-entrepreneurship-2-0"
+  },
+  {
+    "name": "Good Economics for Hard Times",
+    "author": "Abhijit V. Banerjee, Esther Duflo",
+    "goodreads_link": "https://www.goodreads.com/book/show/51014619-good-economics-for-hard-times"
+  },
+  {
+    "name": "Atomic Habits",
+    "author": "James Clear",
+    "goodreads_link": "https://www.goodreads.com/book/show/40121378-atomic-habits"
+  },
+  {
+    "name": "Ultra-Processed People",
+    "author": "Chris van Tulleken",
+    "goodreads_link": "https://www.goodreads.com/book/show/62586003-ultra-processed-people"
+  },
+  {
+    "name": "Wordslut",
+    "author": "Amanda Montell",
+    "goodreads_link": "https://www.goodreads.com/book/show/41716694-wordslut"
+  },
+  {
+    "name": "The Martian",
+    "author": "Andy Weir",
+    "goodreads_link": "https://www.goodreads.com/book/show/18007564-the-martian"
+  },
+  {
+    "name": "",
+    "author": "",
+    "goodreads_link": ""
+  },
+  {
+    "name": "",
+    "author": "",
+    "goodreads_link": ""
+  },
+  {
+    "name": "",
+    "author": "",
+    "goodreads_link": ""
+  },
+  {
+    "name": "",
+    "author": "",
+    "goodreads_link": ""
+  }
+]

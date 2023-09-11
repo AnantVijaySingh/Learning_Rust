@@ -1,3 +1,5 @@
+use std::ffi::CString;
+
 fn main() {
     println!("Hello, world!");
 
@@ -49,6 +51,24 @@ fn main() {
     *x += 1;
     println!("{a:?}");
 
+    // The slice type
+    let a_string = String::from("Pizza with extra cheese!");
+    let b_string = "Chocolate cake is the best!";
+    println!("{}", first_word(&a_string));
+    println!("{}", first_word(b_string));
+
+}
+
+fn first_word(s: &str) -> &str {
+    let bytes = s.as_bytes();
+
+    for (i, &item) in bytes.iter().enumerate() {
+        if item == b' ' {
+            return &s[0..i];
+        }
+    }
+
+    &s[0..s.len()]
 }
 
 fn add_big_strings(dst: &mut Vec<String>, src: &[String]) {
