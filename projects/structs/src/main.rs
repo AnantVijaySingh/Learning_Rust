@@ -6,6 +6,9 @@ struct Book {
     goodreads_link: String
 }
 
+//Tuple struct
+struct Color (i32, i32, i32);
+
 fn main() {
     let book_1 = Book {
         number: 1,
@@ -26,6 +29,7 @@ fn main() {
 
     display_book_details(&book_2);
 
+    let black = Color(0, 0 ,0);
 }
 
 fn build_book_struct (number: u32, name: String, authors: String, goodreads_link: String) -> Book {
