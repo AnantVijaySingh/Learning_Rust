@@ -12,6 +12,7 @@
       <sourceFolder url="file://$MODULE_DIR$/projects/top_10_books/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/projects/rectangles/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/projects/exercise_1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/projects/enums/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/projects/sorting_algos/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/projects/guessing_game/target" />
       <excludeFolder url="file://$MODULE_DIR$/projects/hello_cargo/target" />
@@ -23,6 +24,7 @@
       <excludeFolder url="file://$MODULE_DIR$/projects/top_10_books/target" />
       <excludeFolder url="file://$MODULE_DIR$/projects/rectangles/target" />
       <excludeFolder url="file://$MODULE_DIR$/projects/exercise_1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/projects/enums/target" />
       <excludeFolder url="file://$MODULE_DIR$/projects/sorting_algos/target" />
     </content>
     <orderEntry type="inheritedJdk" />
