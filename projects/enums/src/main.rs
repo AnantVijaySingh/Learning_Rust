@@ -76,6 +76,7 @@ fn main() {
     // Match and Ownership
 
     let opt: Option<String> = Some(String::from("Hey!"));
+    // let opt: Option<String> = None;
 
     match opt {
         Some(_) => {
@@ -95,6 +96,15 @@ fn main() {
         None => {
             println!("None!");
         }
+    }
+
+    // if let
+    let coin = Coin::Quarter(USState::Washington);
+    let mut count = 0;
+    if let Coin::Quarter(state) = coin {
+        println!("State quarter from {:?}", state);
+    } else {
+        count += 1;
     }
 
 }
