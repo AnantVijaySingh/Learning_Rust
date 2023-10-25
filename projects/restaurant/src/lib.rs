@@ -1,27 +1,7 @@
+mod front_of_house;
+
 pub fn add(left: usize, right: usize) -> usize {
     left + right
-}
-
-mod front_of_house {
-    pub mod hosting {
-        pub fn add_to_waitlist() {
-        }
-
-        fn seat_at_table () {
-        }
-
-    }
-
-    mod serving {
-        fn take_order() {
-        }
-
-        fn serve_order () {
-        }
-
-        fn take_payment () {
-        }
-    }
 }
 
 mod back_of_house {
@@ -61,6 +41,8 @@ mod back_of_house {
 fn deliver_order () {
 }
 
+use crate::front_of_house::hosting;
+
 pub fn eat_at_restaurant () {
 
     // Absolute path
@@ -68,6 +50,9 @@ pub fn eat_at_restaurant () {
 
     // Relative path
     front_of_house::hosting::add_to_waitlist();
+
+    // With use keyword
+    hosting::add_to_waitlist();
 
     // In case of Structs, fields are private by default even for a public Struct
     // Order a breakfast in the summer with Rye toast
