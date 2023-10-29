@@ -17,6 +17,7 @@
       <sourceFolder url="file://$MODULE_DIR$/projects/backyard/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/projects/macOS_test_files/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/projects/restaurant/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/projects/vectors/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/projects/guessing_game/target" />
       <excludeFolder url="file://$MODULE_DIR$/projects/hello_cargo/target" />
       <excludeFolder url="file://$MODULE_DIR$/projects/variables/target" />
@@ -33,6 +34,7 @@
       <excludeFolder url="file://$MODULE_DIR$/projects/macOS_test_files/image_files" />
       <excludeFolder url="file://$MODULE_DIR$/projects/macOS_test_files/target" />
       <excludeFolder url="file://$MODULE_DIR$/projects/restaurant/target" />
+      <excludeFolder url="file://$MODULE_DIR$/projects/vectors/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

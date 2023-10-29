@@ -5,9 +5,9 @@ use rand::Rng;
 use std::fs;
 
 fn main() {
-    let width = 800;
-    let height = 600;
-    let num_images = 100; // Number of images to generate
+    let width = 1000;
+    let height = 1000;
+    let num_images = 5000; // Number of images to generate
 
     // Create a directory to store the image files
     let _ = fs::create_dir("image_files");
@@ -15,10 +15,14 @@ fn main() {
     // Create a separate image with random colors for each iteration
     for i in 0..num_images {
         let imgbuf: ImageBuffer<Rgb<u8>, Vec<u8>> = ImageBuffer::from_fn(width, height, |_x, _y| {
-            let mut rng = rand::thread_rng();
-            let red = rng.gen_range(0..256);
-            let green = rng.gen_range(0..256);
-            let blue = rng.gen_range(0..256);
+            let mut rng = rand::thread_rng().gen_range(0..256);
+            let red = rng;
+            let green = rng;
+            let blue = rng;
+            // let mut rng = rand::thread_rng();
+            // let red = rng.gen_range(0..256);
+            // let green = rng.gen_range(0..256);
+            // let blue = rng.gen_range(0..256);
             Rgb([red as u8, green as u8, blue as u8])
         });
 
