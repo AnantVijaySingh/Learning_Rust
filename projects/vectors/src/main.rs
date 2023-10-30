@@ -33,5 +33,26 @@ fn main() {
         println!("Messing up the vector v_4 {}", *n_ref + 1);
     }
 
+    // Using an Enum to Store Multiple Types
+    #[derive(Debug)]
+    enum SpreadsheetCell {
+        Integer(i32),
+        Decimal(f64),
+        Text(String),
+    }
+
+    let mut row = Vec::new();
+
+    row.push(SpreadsheetCell::Integer(3));
+    row.push(SpreadsheetCell::Decimal(1.1));
+    row.push(SpreadsheetCell::Text(String::from("Orange")));
+
+    for i in row {
+        match i {
+            SpreadsheetCell::Text(value) => println!("The text in the row is: {}", value),
+            other => (),
+        }
+    }
+
 
 }
