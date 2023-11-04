@@ -19,7 +19,7 @@ fn main() {
     hellos.push(String::from("Olá"));
     hellos.push(String::from("Hola"));
 
-    for hello in hellos {
+    for hello in &hellos {
         println!("{}", hello);
     }
 
@@ -47,5 +47,21 @@ fn main() {
     let s_12 = format!("{s_9} - {s_10} - {s_11}");
 
     println!("{}", s_12);
+
+    // Slicing Strings
+    let s_20 = String::from("You are a wizard, Harry");
+
+    let slice_20 = &s_20[0..4]; // Can panic at runtime
+
+    println!("{}", slice_20);
+
+    // Methods for Iterating Over Strings
+    for characters in hellos[4].chars() {
+        println!("{}", characters);
+    }
+
+    for characters in hellos[2].bytes() {
+        println!("{}", characters);
+    }
 
 }
