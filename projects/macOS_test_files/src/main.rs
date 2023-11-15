@@ -9,7 +9,7 @@ use rand::Rng;
 fn main() {
     let width = 1000;
     let height = 1000;
-    let num_images = 767; // Number of images to generate
+    let num_images = 250; // Number of images to generate
 
     // Create a directory to store the image files
     let _ = fs::create_dir("image_files");
@@ -17,14 +17,15 @@ fn main() {
     // Create a separate image with a random color for each iteration
     for i in 0..num_images {
         // Generate a random color
-        let color = generate_color(i);
+        // let color = generate_color(i);
+        let color = generate_color_1(i);
         // let color = generate_random_color();
 
         // Create an image with the specified color
         let imgbuf: ImageBuffer<Rgb<u8>, Vec<u8>> = ImageBuffer::from_pixel(width, height, color);
 
         // Specify the file path with an index and store it in the "image_files" directory
-        let file_path = format!("image_files/random_color_image{}.jpg", i);
+        let file_path = format!("image_files/test_color_image{}.jpg", i);
 
         // Save the image as a JPEG file
         imgbuf.save(Path::new(&file_path)).unwrap();
@@ -55,6 +56,15 @@ fn generate_color(i: i32) -> Rgb<u8> {
         green = 255;
         blue = i - 256;
     }
+
+    Rgb([red as u8, green as u8, blue as u8])
+}
+
+fn generate_color_1(i: i32) -> Rgb<u8> {
+
+    let mut red = rand::thread_rng().gen_range(0..256);
+    let mut blue = rand::thread_rng().gen_range(0..256);
+    let mut green = rand::thread_rng().gen_range(0..256);
 
     Rgb([red as u8, green as u8, blue as u8])
 }
