@@ -19,8 +19,8 @@ fn main() {
         "melon",   // Anagram of "lemon"
         "listen",  // Anagram of "silent"
         "silent",  // Anagram of "listen"
-        "debitcard", // Anagram of "badcredit"
-        "badcredit", // Anagram of "debitcard"
+        "debit card", // Anagram of "badcredit"
+        "bad credit", // Anagram of "debitcard"
     ];
 
 
@@ -62,6 +62,7 @@ fn is_an_anagram_or_not(word_1: &str, word_2: &str) {
         ('x', [0, 0]),
         ('y', [0, 0]),
         ('z', [0, 0]),
+        (' ', [0, 0])
     ]);
 
     for char in word_1.chars() {
