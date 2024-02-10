@@ -1,4 +1,3 @@
-use std::error::Error;
 use std::fs;
 use std::fs::File;
 use std::io::{self, Read};
@@ -12,14 +11,22 @@ enum FnToRun {
 }
 
 impl FnToRun {
-    fn run_fn (file_path_and_name: &str) {
+    fn run_fn () -> Self {
         let random_number:u32 = rand::thread_rng().gen_range(1..=3);
         match random_number {
-            1 => {one(file_path_and_name);},
-            2 => {two(file_path_and_name);},
-            3 => {three(file_path_and_name);},
-            _ => {}
-        };
+            1 => FnToRun::One,
+            2 => FnToRun::Two,
+            3 => FnToRun::Three,
+            _ => FnToRun::One, // fallback
+        }
+    }
+
+    fn execute(&self, file_path_and_name: &str) {
+        match self {
+            FnToRun::One => one(file_path_and_name),
+            FnToRun::Two => two(file_path_and_name),
+            FnToRun::Three => three(file_path_and_name),
+        }
     }
 }
 
@@ -36,7 +43,8 @@ fn main() {
 
     let file_path_and_name = file_path_and_name.trim();
 
-    FnToRun::run_fn(file_path_and_name);
+    let fn_choice = FnToRun::run_fn();
+    fn_choice.execute(file_path_and_name);
 
     let username = read_username_from_file_long_form(file_path_and_name).unwrap_or_else(|error| {
         println!("{}", error);
@@ -50,7 +58,7 @@ fn main() {
 
 
 fn read_username_from_file_long_form(file_path_and_name: &str) -> Result<String, io::Error>{
-    let username_file_result = File::open("Hello");
+    let username_file_result = File::open(file_path_and_name);
 
     let mut username_file = match username_file_result {
         Ok(file) => file,
@@ -66,7 +74,7 @@ fn read_username_from_file_long_form(file_path_and_name: &str) -> Result<String,
 }
 
 fn read_username_from_file_short_form(file_path_and_name: &str) -> Result<String, io::Error> {
-    let mut username_file = File::open("Hello")?;
+    let mut username_file = File::open(file_path_and_name)?;
 
     let mut username = String::new();
 
@@ -75,17 +83,19 @@ fn read_username_from_file_short_form(file_path_and_name: &str) -> Result<String
 }
 
 fn read_username_from_file_shortest(file_path_and_name: &str) -> Result<String, io::Error> {
-    fs::read_to_string("Hello")
+    fs::read_to_string(file_path_and_name)
 }
 
 
 fn one (file_path_and_name: &str)  {
 
-    let file_name = file_path_and_name.clone();
+    println!("Running function one");
+
+    let file_name = file_path_and_name;
 
     let file_result = File::open(file_path_and_name);
 
-    let file = match file_result {
+    match file_result {
         Ok(file) => {file},
         Err(error) => {
             match error.kind() {
@@ -104,10 +114,14 @@ fn one (file_path_and_name: &str)  {
 }
 
 fn two (file_path_and_name: &str) {
-    let file_result = File::open(file_path_and_name)
+    println!("Running function two");
+
+     File::open(file_path_and_name)
         .expect("{} should have been included in the project folder");
 }
 
 fn three (file_path_and_name: &str) {
-    let file_result = File::open(file_path_and_name).unwrap();
+    println!("Running function three");
+
+    File::open(file_path_and_name).unwrap();
 }
