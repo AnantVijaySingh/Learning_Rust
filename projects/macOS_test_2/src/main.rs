@@ -33,7 +33,7 @@ fn main() {
     // Create and update files in parallel
     let handles: Vec<_> = (0..file_count)
         .map(|i| {
-            let file_path = format!("/Users/anantvijaysingh/Library/CloudStorage/ProtonDrive-anantv@proton.me/Hehehe/file_10sec_{}.txt", i);
+            let file_path = format!("", i);
             let cloned_path = file_path.clone();
 
             thread::spawn(move || {
